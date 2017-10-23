@@ -10,12 +10,12 @@ def gui_fname(dir=None):
                 dir, filter="All files (*);; SM Files (*.sm)")
     return fname[0]
 
-def readCsv(filename='500_Cities__Local_Data_for_Better_Health.csv'):
+def readCsv(filename='Lai_dataset.csv'):
     with open(filename, newline='') as csvfile:
         csvReader = csv.reader(csvfile, delimiter=' ', quotechar='|')
         next(csvReader, None)
         for idx, val in enumerate(csvReader):
-            input('Press Enter to continue' + str(idx) + ':s')
+            input('Press Enter to continue ' + str(idx) + ' : ')
             print(val)
 
 if __name__ == '__main__':
